@@ -1,0 +1,11 @@
+{
+    "manifest_version": 3,
+    "name": "chrome-plugin",
+    "description": "chrome plugin frame",
+    "version": "0.0.1",
+    "options_page": "options.html",
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "popup.png"
+    }
+}
