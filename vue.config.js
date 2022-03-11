@@ -27,6 +27,7 @@ const plugins =
 
 module.exports = {
   pages: pagesObj,
+  productionSourceMap: false,
   configureWebpack: {
     plugins: [CopyWebpackPlugin(plugins)]
   }
