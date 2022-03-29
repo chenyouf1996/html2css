@@ -1,4 +1,4 @@
-# chrome-plugin框架
+# html2CssStruct
 
 ## Project setup
 ```
@@ -10,10 +10,4 @@ npm install
 npm run build
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### 浏览器打开开发者模式加载打包目录dist文件夹
