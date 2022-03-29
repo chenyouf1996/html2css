@@ -1,15 +1,19 @@
 <template>
   <div class="main_app">
-    <div class="title">
-      <span>scss类名结构生成工具</span>
-      <el-button type="primary" size="medium" @click="generateHandler">生成</el-button>
+    <div class="title-wrap">
+      <div class="title">
+        <span class="tip">scss类名结构生成工具</span>
+        <el-button type="primary" size="medium" @click="generateHandler">生成</el-button>
+      </div>
+      <el-input v-model="htmlString" placeholder="输入html字符串" type="textarea" :autosize="{minRows: 6, maxRows: 9}" resize="none" />
     </div>
-    <el-input v-model="htmlString" placeholder="输入html字符串" type="textarea" :autosize="{minRows: 6, maxRows: 9}" resize="none" />
-    <div v-if="cssStruct" class="title" style="margin-top: 10px">
-      <span>scss类名结构</span>
-      <el-button type="primary" size="medium" @click="copyHandler">复制</el-button>
+    <div v-if="cssStruct" class="title-wrap">
+      <div class="title" style="margin-top: 10px">
+        <span class="tip">scss类名结构</span>
+        <el-button type="primary" size="medium" @click="copyHandler">复制</el-button>
+      </div>
+      <el-input id="scss-content" v-model="cssStruct" type="textarea" :autosize="{minRows: 6, maxRows: 9}" resize="none" />
     </div>
-    <el-input v-if="cssStruct" id="scss-content" v-model="cssStruct" type="textarea" :autosize="{minRows: 6, maxRows: 9}" resize="none" />
   </div>
 </template>
 
@@ -72,7 +76,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
   html,
   body {
     margin: 0;
@@ -88,18 +92,22 @@ export default {
     width: 500px;
     min-height: 500px;
     padding: 10px;
-  }
 
-  .title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-  }
+    .title-wrap {
+      margin-bottom: 10px;
 
-  .title>span {
-    font-size: 18px;
-    font-weight: bold;
-    color: #000000;
+      .title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+
+        .tip {
+          font-size: 18px;
+          font-weight: bold;
+          color: #000000;
+        }
+      }
+    }
   }
 </style>
