@@ -56,13 +56,15 @@ export default {
       return re
     },
     formatScssStruct(scssObject) {
-      let scssString = JSON.stringify(scssObject, null, 4)
+      const spaces = 4
+      let scssString = JSON.stringify(scssObject, null, spaces)
       scssString = scssString.substring(1, scssString.length - 1)
       scssString = scssString.replace('\n', '')
       scssString = scssString.replaceAll('"', '')
       scssString = scssString.replaceAll(':', '')
       scssString = scssString.replaceAll(',', '')
       scssString = scssString.replaceAll('&', ',')
+      scssString = scssString.split('\n').map(item => item.substring(spaces, item.length)).join('\n')
       return scssString
     },
     html2CssStruct(domString) {
