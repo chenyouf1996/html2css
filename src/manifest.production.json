@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
-    "name": "chrome-plugin",
-    "description": "chrome plugin frame",
+    "name": "html2css-struct",
+    "description": "html标签转scss类名结构",
     "version": "0.0.1",
     "options_page": "options.html",
     "action": {

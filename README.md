@@ -1,4 +1,4 @@
-# html2CssStruct
+# html2css-struct
 
 ## Project setup
 ```
