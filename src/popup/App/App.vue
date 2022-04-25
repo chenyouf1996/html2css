@@ -44,8 +44,11 @@ export default {
       const childNodes = dom.children
       Array.from(childNodes).forEach(childNode => {
         const classNameList = Array.from(childNode.classList).map(item => `.${item}`)
-        const className = classNameList.join('&')
+        let className = classNameList.join('&')
         if (className) {
+          re[className] = {}
+        } else {
+          className = childNode.tagName.toLowerCase()
           re[className] = {}
         }
         if (childNode.children.length) {
