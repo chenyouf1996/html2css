@@ -28,6 +28,7 @@ export default {
   },
   methods: {
     generateHandler() {
+      this.htmlString = this.htmlString.replaceAll('className', 'class')
       this.cssStruct = this.html2CssStruct(this.htmlString)
     },
     async copyHandler() {
